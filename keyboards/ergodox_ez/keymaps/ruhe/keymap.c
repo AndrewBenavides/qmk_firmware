@@ -36,13 +36,10 @@ enum custom_keycodes {
 #define KC_CTRT LCTL(KC_RGHT)
 #define KC_ALLF LALT(KC_LEFT)
 #define KC_ALRT LALT(KC_RGHT)
-#define KC_QUMV LT(_MOVEMENT, KC_QUOT)
+#define KC_RSET RESET
 
 #undef TAPPING_TERM
 #define TAPPING_TERM 400
-#undef TAPPING_TOGGLE
-#define TAPPING_TOGGLE 3
-#define PERMISSIVE_HOLD
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_QWERTY] = KC_KEYMAP2(
@@ -51,9 +48,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+------+------+------+------+-------------|      |------+------+------+------+------+------+--------|
        TAB   ,   Q  ,   W  ,   E  ,   R  ,   T  , LBRC ,        RBRC ,   Y  ,   U  ,   I  ,   O  ,   P  ,  BSLS  ,
   //|--------+------+------+------+------+------|      |      |      |------+------+------+------+------+--------|
-       CAPS  ,   A  ,   S  ,   D  , FMOV ,   G  ,                        H  ,   J  ,   K  ,   L  , SCLN ,  QUMV  ,
+       CAPS  ,   A  ,   S  ,   D  , FMOV ,   G  ,                        H  ,   J  ,   K  ,   L  , SCLN ,  QUOT  ,
   //|--------+------+------+------+------+------|      |      |      |------+------+------+------+------+--------|
-       LSFT  ,   Z  ,   X  ,   C  ,   V  ,   B  , LPRN ,        RPRN ,   N  ,   M  , COMM ,  DOT , SLSH ,  RSFT  ,
+       LSFT  ,   Z  ,   X  ,   C  ,   V  ,   B  ,  NO  ,        MOVE ,   N  ,   M  , COMM ,  DOT , SLSH ,  RSFT  ,
   //`--------+------+------+------+------+-------------'      `-------------+------+------+------+------+--------'
        LCTL  , NPMO , LGUI , LALT , FUNC ,                                    FUNC , RALT , RGUI , APP  , RCTL ,
   //  `----------------------------------'                                  `----------------------------------'
@@ -162,7 +159,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //                              ,------|------|------|      |------+------+------.
                                                        ,             ,
   //                              |------|------|------|      |------|------|------|
-                                         ,      ,      ,             ,      ,
+                                         ,      , RSET ,        RSET ,      ,
   //                              `--------------------'      `--------------------'
 ),
 };
