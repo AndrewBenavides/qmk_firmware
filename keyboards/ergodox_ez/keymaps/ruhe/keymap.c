@@ -57,9 +57,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //                                     ,-------------.      ,-------------.
                                            LCTL , LALT ,        RALT , RCTL ,
   //                              ,------|------|------|      |------+------+------.
-                                                  LOWR ,        RASE ,
+                                                  LSFT ,        RSFT ,
   //                              |------|------|------|      |------|------|------|
-                                    DEL  , BSPC , LSFT ,        RSFT , SPC  , ENT
+                                    DEL  , BSPC , LOWR ,        RASE , SPC  , ENT
   //                              `--------------------'      `--------------------'
 ),
 [_NUMPAD] = KC_KEYMAP2(
